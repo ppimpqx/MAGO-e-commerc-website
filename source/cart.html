@@ -1,0 +1,100 @@
+@@include('header.htm')
+
+@@include('blocks/navigation.htm')
+
+@@include('blocks/page-header.htm', {
+    "title": "Cart",
+    "pagination": "cart"
+})
+
+<div class="page-wrapper">
+  <div class="cart shopping">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="block">
+            <div class="product-list">
+              <form method="post">
+                <table class="table">
+                  <thead>
+                    <tr> 
+                      <th class="">Actions</th>
+                      <th class="">Item</th>
+                      <th class="">Price</th>
+                      <th class="">Quantity</th>
+                      <th class="">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td class="">
+                        <a class="product-remove" href="#!"><i class="tf-ion-android-delete"></i></a>
+                      </td>
+                      <td class="">
+                        <div class="product-info">
+                          <img width="80" src="images/shop/single-products/BAMBO/beige.png" alt="" />
+                          <a href="#!">Bambo</a>
+                        </div>
+                      </td>
+                      <td class="">THB 850.00</td>
+                      <td class="product-quantity">
+                        <div class="product-quantity-slider">
+                          <input id="product-quantity" type="text" value="0" name="product-quantity">
+                        </div>
+                      </td>
+                      <td class="">THB850.00</td>
+                    </tr>
+                    <tr class="">
+                      <td class="">
+                        <a class="product-remove" href="#!"><i class="tf-ion-android-delete"></i></a>
+                      </td>
+                      <td class="">
+                        <div class="product-info">
+                          <img width="80" src="images/shop/single-products/LITA WALKSTAR/ครีม.jpg" alt="" />
+                          <a href="#!">Lita Walkstar</a>
+                        </div>
+                      </td>
+                      <td class="">THB 1,990.00</td>
+                      <td class="product-quantity">
+                        <div class="product-quantity-slider">
+                          <input id="product-quantity" type="text" value="0" name="product-quantity">
+                        </div>
+                      </td>
+                      <td class="">THB1,990.00</td>
+                    </tr>
+                    <tr class="">
+                      <td class="">
+                        <a class="product-remove" href="#!"><i class="tf-ion-android-delete"></i></a>
+                      </td>
+                      <td class="">
+                        <div class="product-info">
+                          <img width="80" src="images/shop/single-products/De’Bean II/ชมพู.png" alt="" />
+                          <a href="#!">De'Bean II</a>
+                        </div>
+                      </td>
+                      <td class="">THB 1,990.00</td>
+                      <td class="product-quantity">
+                        <div class="product-quantity-slider">
+                          <input id="product-quantity" type="text" value="0" name="product-quantity">
+                        </div>
+                      </td>
+                      
+                      <td class="">THB1,990.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="shop.html" class="btn btn-main pull-left">Continue Shopping</a>
+                <a href="checkout.html" class="btn btn-main pull-right">Checkout</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+@@include('blocks/footer.htm')
+
+@@include('footer.htm')

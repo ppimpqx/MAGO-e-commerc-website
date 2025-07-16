@@ -1,0 +1,23 @@
+@@include('header.htm')
+
+@@include('blocks/navigation.htm')
+
+@@include('blocks/page-header.htm', {
+"title": "Shop",
+"pagination": "shop"
+})
+
+
+<section class="products section">
+	<div class="container">
+		<div class="row">
+			@@include('blocks/product2.htm')
+		</div>
+	</div>
+</section>
+
+
+
+@@include('blocks/footer.htm')
+
+@@include('footer.htm')

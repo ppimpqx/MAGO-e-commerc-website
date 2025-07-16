@@ -1,0 +1,49 @@
+@@include('header.htm')
+
+@@include('blocks/navigation.htm')
+
+@@include('blocks/page-header.htm', {
+"title": "Staff",
+"pagination": "Staff"
+})
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scan QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.0/html5-qrcode.min.js"></script>
+  </head>
+  <body>
+    <div id="qr-container"></div>
+    <script>
+      var qrContainer = document.getElementById("qr-container");
+
+      // Generate a QR code for the payment details
+      var qrCode = new QRCode(qrContainer, {
+        text: "Payment Details",
+        width: 128,
+        height: 128,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+      // Scan the QR code using the device's camera
+      var scanner = new Html5Qrcode("qr-container");
+      scanner.start({ facingMode: "environment" }, {
+        qrbox: 250
+      }, function(result) {
+        // Send the payment details to the server for validation
+        console.log("Payment Details: " + result);
+      }, function(error) {
+        console.log("Error: " + error);
+      });
+    </script>
+  </body>
+</html>
+
+
+@@include('blocks/footer.htm')
+@@include('footer.htm')
